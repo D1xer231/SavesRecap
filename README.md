@@ -73,20 +73,13 @@ Download the latest release from the [Releases](https://github.com/D1xer231/Save
 ### Running the Application
 
 #### Using Visual Studio:
-1. Open `SavesRecap.slnx` in Visual Studio 2022
+1. Open `SavesRecap.slnx` in Visual Studio 2022 (version 17.6 or later)
 2. Press `F5` or click the "Start" button to build and run
 
 #### Using .NET CLI:
 ```bash
 cd SavesRecap
 dotnet restore
-dotnet run
-```
-
-#### Using Command Line:
-```bash
-cd SavesRecap
-dotnet build
 dotnet run --project SavesRecap/SavesRecap.csproj
 ```
 
@@ -175,7 +168,7 @@ Contributions are welcome! Here's how you can help:
 This project is licensed under the **MIT License** - see the [LICENSE.txt](LICENSE.txt) file for details.
 
 ```
-MIT License - Copyright (c)
+MIT License - Copyright (c) 2024 D1xer231
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files...
