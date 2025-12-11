@@ -4,9 +4,87 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SavesRecap"
+        Style="{StaticResource MaterialDesignWindow}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="500" Width="400">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF213D4F" Offset="0.157"/>
+                <GradientStop Color="Black" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Menu FontSize="15" VerticalAlignment="Center">
+            <MenuItem Header="App" Foreground="White">
+                <MenuItem Header="About" Foreground="White" Command="{Binding AboutAppCommand}"/>
+                <MenuItem Header="Exit" Foreground="White" Click="exit_btn_Click"/>
+            </MenuItem>
+            <MenuItem Header="Help" Foreground="White">
+                <MenuItem Header="Documentation" Foreground="White" Command="{Binding UrlOpenningCommand}" CommandParameter="https://github.com/D1xer231/SavesRecap"/>
+                <MenuItem Header="Support" Foreground="White"/>
+            </MenuItem>
+            <MenuItem Header="Settings" Foreground="White">
+                <MenuItem Header="Preferences" Foreground="White"/>
+                <MenuItem Header="Update" Foreground="White" Command="{Binding UrlOpenningCommand}" CommandParameter="https://github.com/D1xer231/SavesRecap/releases"/>
+            </MenuItem>
+            <MenuItem Header="GitHub" Foreground="White">
+                <MenuItem Header="View Profile" Foreground="White" Command="{Binding UrlOpenningCommand}" CommandParameter="https://github.com/D1xer231"/>
+            </MenuItem>
+        </Menu>
 
+        <Grid Grid.Row="1">
+            <TextBlock Text="Safer to Safe"
+                       Foreground="White"
+                       FontSize="30"
+                       HorizontalAlignment="Center" 
+                       Margin="0,10,0,10"
+                       FontWeight="Bold"
+                       VerticalAlignment="Top"/>
+            <TextBlock Text="Choose next options:"
+                       Foreground="White"
+                       FontSize="20"
+                       HorizontalAlignment="Center" Margin="0,50,0,0"/>
+            <StackPanel>
+                <Button 
+                    Margin="0,120,0,10"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="200"
+                    Content="Show Path"
+                    Click="ShowPath_Click"/>
+
+                <Button Margin="0,10,0,10"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Width="200"
+                        Content="BackUp Saves"
+                        Click="BackUpSave_Click"/>
+
+                <TextBlock x:Name="InfoTexblock"
+                           Foreground="White"
+                           FontSize="10"
+                           HorizontalAlignment="Center" 
+                           Margin="0,20,0,0"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock Text="SavesRecap © 2025"
+                       Foreground="White"
+                       FontSize="12"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"/>
+            <TextBlock Text="1.0"
+                       Foreground="White"
+                       FontSize="9"
+                       HorizontalAlignment="Right" 
+                       VerticalAlignment="Center" Margin="0,0,20,0"/>
+        </Grid>
     </Grid>
 </Window>
