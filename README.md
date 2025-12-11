@@ -1,5 +1,7 @@
 # 💾 SavesRecap
-[![Logo](ico_png.png)]()
+<p align="center">
+  <img src="ico_png.png" alt="Diagram" />
+</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
